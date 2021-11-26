@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 var bodyParser = require("body-parser");
 
-const port = 3000;
+const port = "https://brave-wave-crm-crud-registration.netlify.app/";
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 var MongoClient = require("mongodb").MongoClient;
@@ -26,6 +26,4 @@ app.post("/crud-registeration", (req, res, next) => {
 
   })
 })
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
+app.listen(port);
